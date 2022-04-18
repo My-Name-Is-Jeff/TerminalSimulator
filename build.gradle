@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'net.dungeonsim'
-version 'V-1.0'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation files('minecraft/paper.jar')
 }
