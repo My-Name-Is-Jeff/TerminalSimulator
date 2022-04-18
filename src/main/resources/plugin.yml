@@ -1,7 +1,0 @@
-main: net.dungeonsim.dungeonsimulator.DungeonSimulator
-name: DungeonSimulator
-version: 1.0.0
-author: DungeonSimulator
-description: Dungeon Simulator core plugin
-prefix: DSIM
-api-version: 1.16
