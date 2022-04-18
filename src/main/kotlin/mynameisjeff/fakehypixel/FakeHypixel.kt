@@ -25,7 +25,7 @@ object FakeHypixel : PacketListener {
     fun setScoreboard() {
         val scoreboard = Bukkit.getScoreboardManager().mainScoreboard
         val obj = scoreboard.getObjective(DisplaySlot.SIDEBAR) ?: scoreboard.registerNewObjective("SKYBLOCK", "dummy").apply { displaySlot = DisplaySlot.SIDEBAR }
-        obj.getScore("Dungeon Cleared: 100%").apply {
+        obj.getScore("Cleared: 100%").apply {
             score = 1
         }
         obj.getScore("The Catacombs (F7)").apply {
