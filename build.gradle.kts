@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.20"
+    kotlin("plugin.serialization") version "1.6.10"
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
 }
@@ -19,6 +20,7 @@ dependencies {
     compileOnly("com.github.CobbleSword.NachoSpigot:api:74ed0ea729:sources")
     compileOnly("com.github.CobbleSword.NachoSpigot:nachospigot:74ed0ea729")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
@@ -69,7 +71,7 @@ tasks {
 
     withType<KotlinCompile> {
         kotlinOptions {
-            jvmTarget = "17"
+            jvmTarget = "1.8"
             freeCompilerArgs =
                 listOf("-opt-in=kotlin.RequiresOptIn", "-Xjvm-default=all", "-Xrelease=17", "-Xbackend-threads=0")
         }
@@ -102,6 +104,6 @@ tasks {
 kotlin {
     jvmToolchain {
         check(this is JavaToolchainSpec)
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
