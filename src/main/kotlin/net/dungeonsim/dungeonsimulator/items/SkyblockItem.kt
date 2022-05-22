@@ -15,5 +15,5 @@ abstract class SkyblockItem(){
     open var reforgeable: Boolean = true
     val data = SkyblockItemData();
     abstract fun createItem(): ItemStack
-    //efghas
+    //abceded
 }
